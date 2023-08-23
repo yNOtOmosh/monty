@@ -6,7 +6,7 @@
  * @counter: line number of the command
  */
 
-void F_pint(stack_t **head, unsigned int counter)
+void f_pint(stack_t **head, unsigned int counter)
 {
 	if (*head == NULL)
 	{
