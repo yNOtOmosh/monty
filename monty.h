@@ -10,6 +10,21 @@
 #include <ctype.h>
 
 /**
+ * strut - holds the necessary data
+ * @file: pointer to the file
+ * @content: the details in the file
+ * @stack: chosen stack
+ * @counter: line number of command
+ */
+
+typedef struct {
+    FILE *file;
+    char *content;
+    stack_t *stack;
+    unsigned int counter;
+} MontyContext;
+
+/**
  * struct stack_s - doubly linked list representation of a stack (or queue)
  * @n: integer
  * @prev: points to the previous element of the stack (or queue)
