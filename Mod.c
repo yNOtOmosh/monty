@@ -10,7 +10,8 @@
 void f_mod(stack_t **head, unsigned int counter)
 {
 	stack_t *temp;
-
+	
+	temp = *head;
 	if (*head == NULL || (*head)->next == NULL)
 	{
 		fprintf(stderr, "L%u: can't mod, stack too short\n", counter);
@@ -30,9 +31,10 @@ void f_mod(stack_t **head, unsigned int counter)
 	}
 
 
-	(*head->next->n %= (*head)->n;
+	(*head)->next->n %= (*head)->n;
 	temp = *head;
 	*head = (*head)->next;
 	(*head)->prev = NULL;
 	free(temp);
+}
 }
